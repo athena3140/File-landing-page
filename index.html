@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="static/css/style.css" />
+		<link
+			rel="icon"
+			href="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/512/external-download-design-thinking-xnimrodx-blue-xnimrodx.png" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<!-- Logo Cdn -->
+		<link rel="stylesheet" href="https://cdn.athena3140.tech/logo.css" />
+		<title>နွားတရားစီရင်ခန်း</title>
+	</head>
+	<body id="body">
+		<nav>
+			<div class="logo">
+				<a href="/"><span>A</span><span>thena</span></a>
+			</div>
+			<ul>
+				<li><a onclick="setTimeout(()=>{location.reload()},150)">Home</a></li>
+				<li><a onclick="btn.focus()">Download</a></li>
+				<li><a href="#docs">How To Use</a></li>
+			</ul>
+			<input type="checkbox" class="check-box" id="check-box" />
+			<label
+				onclick="document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;"
+				for="check-box"
+				class="burger">
+				<div></div>
+				<div></div>
+				<div></div>
+			</label>
+			<div class="menu">
+				<a onclick="unCheck();setTimeout(()=>{location.reload()},150)">Home</a>
+				<a onclick="unCheck();setTimeout(()=>{btn.focus();},250)">Download</a>
+				<a onclick="unCheck();setTimeout(()=>{location.href = '#docs'},150)">How To Use</a>
+			</div>
+		</nav>
+		<div class="container" id="home">
+			<div class="left">
+				<div class="content">
+					<div>Section-7 Group-B's Group Project</div>
+					<div>မဟော်သဓာဇာတ်တော်ကြီး</div>
+					<div>"နွားတရားစီရင်ခန်း"</div>
+				</div>
+				<a class="btn" id="btn" href="#This-Is-Demo-Replace-With-Your-File"
+					>Download
+					<span id="icon" class="material-symbols-outlined"> download </span>
+				</a>
+			</div>
+			<div class="right">
+				<img draggable="false" src="static/img/right.jpg" />
+			</div>
+		</div>
+
+		<div class="docs" id="docs">
+			<h1>
+				How To Open <j>?</j>
+				<br />
+				<i>It's Simple : </i>
+			</h1>
+			<ol>
+				<li>
+					First Download File from
+					<span onclick="click()" id="link">Here</span>
+				</li>
+				<li>Then Extrect it & open the file</li>
+				<li>
+					After that in powerpoint go to <code>Slide Show</code>
+					<img src="static/img/1.jpg" />
+				</li>
+				<li>
+					Click <code>From Beginning</code>
+					<img src="static/img/2.jpg" />
+				</li>
+				<li>
+					To start the slide-show show use <code>arrow key</code> from keyboard
+					<img src="static/img/3.jpg" />
+				</li>
+			</ol>
+		</div>
+		<footer>Made With ❤️ By Athena</footer>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="static/js/script.js"></script>
+</html>

@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Serif+Myanmar:wght@800&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	border: 2px solid white;
+	background-color: rgb(0, 0, 0);
+}
+
+.burger {
+	display: none;
+	width: 3rem;
+	height: 30px;
+}
+
+.burger div {
+	width: 100%;
+	height: 5px;
+	margin: 10px 0;
+	background-color: black;
+	transition: 0.5s;
+}
+
+.menu {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	z-index: 11;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	padding-left: 25%;
+	gap: 4rem;
+	flex-direction: column;
+	font-size: 2.5rem;
+}
+
+.check-box {
+	display: none;
+}
+
+.check-box:checked ~ .menu {
+	left: 0;
+	opacity: 1;
+}
+
+.check-box:checked ~ .burger div:nth-child(1) {
+	z-index: 100;
+	transform: rotate(45deg) translate(10px, 11.5px);
+}
+.check-box:checked ~ .burger div:nth-child(2) {
+	width: 0%;
+	margin: auto;
+	z-index: 100;
+	opacity: 0;
+}
+.check-box:checked ~ .burger div:nth-child(3) {
+	transform: rotate(-45deg) translate(10px, -11.5px);
+}
+
+[title^="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
+	display: none;
+}
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+	display: none;
+}
+img[alt*="000webhost"],
+img[alt*="000webhost"][style],
+img[src*="000webhost"],
+img[src*="000webhost"][style],
+body > div:nth-last-of-type(1)[style] {
+	opacity: 0 !important;
+	pointer-events: none !important;
+	width: 0px !important;
+	height: 0px !important;
+	visibility: hidden !important;
+	display: none !important;
+}
+
+@font-face {
+	font-family: "Anastasia Script Personal Use";
+	src: url(https://athena3140.ml/font.ttf);
+}
+
+body {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1821.33' height='840.29' preserveAspectRatio='none' viewBox='0 0 1821.33 840.29'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1053%26quot%3b)' fill='none'%3e%3crect width='1821.33' height='840.29' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c784.205C144.604%2c778.531%2c221.303%2c611.552%2c338.171%2c526.204C446.133%2c447.36%2c584.529%2c411.603%2c660.672%2c301.719C744.183%2c181.202%2c800.503%2c33.033%2c780.566%2c-112.228C760.587%2c-257.798%2c649.332%2c-368.227%2c553.444%2c-479.562C457.284%2c-591.214%2c366.693%2c-726.802%2c223.032%2c-759.579C81.02%2c-791.979%2c-56.864%2c-706.911%2c-190.661%2c-649.33C-309.856%2c-598.033%2c-424.126%2c-539.15%2c-511.691%2c-443.383C-600.932%2c-345.782%2c-680.627%2c-231.319%2c-693.238%2c-99.673C-705.621%2c29.587%2c-639.144%2c149.304%2c-579.52%2c264.658C-522.442%2c375.088%2c-448.225%2c470.449%2c-355.667%2c553.429C-248.263%2c649.718%2c-144.136%2c789.861%2c0%2c784.205' fill='%23a6a6a6'%3e%3c/path%3e%3cpath d='M1821.33 1284.627C1909.918 1278.17 2009.094 1295.9389999999999 2078.687 1240.746 2147.3379999999997 1186.3 2134.796 1079.518 2176.865 1002.6579999999999 2223.697 917.095 2326.419 862.701 2338.578 765.9209999999999 2351.572 662.489 2325.935 538.151 2243.188 474.748 2159.5769999999998 410.68399999999997 2039.4499999999998 458.87999999999994 1934.155 456.044 1857.831 453.98799999999994 1786.067 457.24699999999996 1709.779 460.38199999999995 1605.349 464.67299999999994 1476.215 403.20699999999994 1403.0729999999999 477.86799999999994 1331.286 551.146 1387.443 677.222 1397.3229999999999 779.327 1405.042 859.098 1432.588 930.75 1454.359 1007.88 1480.6979999999999 1101.193 1461.264 1221.7269999999999 1538.677 1280.107 1615.4669999999999 1338.0169999999998 1725.406 1291.619 1821.33 1284.627' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1053'%3e%3crect width='1821.33' height='840.29' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	user-select: none;
+}
+
+.logo {
+	z-index: 13;
+	font-family: "Anastasia Script Personal Use";
+}
+
+.logo span:nth-child(1) {
+	font-size: 1.8rem;
+}
+
+.logo span:nth-child(2) {
+	font-size: 1.5rem;
+}
+
+ul {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+li a::after {
+	content: "";
+	display: block;
+	width: 0;
+	margin: auto;
+	height: 3px;
+	background-color: rgb(0, 17, 255);
+	transition: 0.5s;
+}
+
+li a:hover::after {
+	width: 100%;
+}
+
+a:not(:nth-child(6)) {
+	text-decoration: none;
+	color: black;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+/* body */
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.left {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	font-size: 2rem;
+	margin-bottom: 6rem;
+	z-index: 2;
+}
+
+.right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.content div:nth-child(1) {
+	font-family: "Courgette", cursive;
+	font-size: 2.5rem;
+}
+
+.content div:nth-child(2) {
+	font-family: "Noto Serif Myanmar", serif;
+	margin: 2rem 0 0;
+}
+
+.right img {
+	border-radius: 10px;
+	width: 81%;
+	box-shadow: 10px 10px 136px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 10px 10px 136px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 136px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn {
+	user-select: none;
+	align-self: flex-start;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-left: 4.5rem;
+	border: 5px solid black;
+	border-image-slice: 1;
+	position: relative;
+	width: fit-content;
+	padding: 8px 15px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.btn span {
+	font-size: 2.3rem;
+	transition: 0.01s;
+}
+
+.btn::after {
+	content: "";
+	background-color: black;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: 0.5s;
+	border-bottom-right-radius: 100%;
+}
+
+.btn:hover::after {
+	width: 260px;
+	height: 260px;
+}
+
+.btn:focus {
+	outline: none;
+	border-color: rgb(87, 87, 87);
+	box-shadow: 5px 5px 8px 3px rgba(87, 87, 87, 0.755);
+}
+
+.btn:hover {
+	color: white;
+	border-radius: 5px;
+}
+
+/* How to Use */
+.docs {
+	padding: 10%;
+}
+
+.docs h1 {
+	font-size: 3rem;
+}
+
+.docs j {
+	font-style: italic;
+}
+
+#link {
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}
+
+.docs i {
+	font-size: 2rem;
+	margin: 30px 0;
+	display: block;
+}
+
+.docs a {
+	text-decoration: underline;
+	color: blue;
+	font-style: italic;
+}
+
+.docs li {
+	font-size: 1.5rem;
+	margin: 2rem 0;
+}
+
+code {
+	padding: 2px 5px;
+	background-color: rgb(228, 228, 228);
+}
+
+.docs img {
+	width: 100%;
+	margin: 20px 0;
+	-webkit-user-drag: none;
+}
+
+footer {
+	padding: 1.5rem 0;
+	text-align: center;
+	font-size: 2rem;
+	border-top: 2px solid wheat;
+}
+
+li:nth-last-child(1) img:last-of-type {
+	width: 40%;
+	object-fit: contain;
+	display: block;
+}
+
+@media (max-width: 768px) {
+	.burger {
+		display: block;
+		z-index: 12;
+	}
+	nav {
+		padding: 5px 20px;
+	}
+	nav ul {
+		display: none;
+	}
+	.logo span:nth-child(1) {
+		font-size: 1.5rem;
+	}
+
+	.logo span:nth-child(2) {
+		font-size: 1.2rem;
+	}
+
+	.left {
+		width: 100%;
+		padding: 12% 5% 5%;
+		text-align: center;
+	}
+	.right {
+		width: 100%;
+		padding: 2%;
+	}
+
+	.right img {
+		border-radius: 10px;
+		width: 100%;
+	}
+
+	.content {
+		margin-bottom: 2.5rem;
+	}
+
+	.content div:nth-child(1) {
+		font-size: 1.2rem;
+	}
+
+	.content div:nth-child(2) {
+		margin: 1rem 0 0;
+	}
+	.content div:nth-child(3) {
+		font-size: 1.5rem;
+		margin-top: -1.5rem;
+	}
+
+	.btn {
+		margin: auto;
+	}
+
+	.btn span {
+		font-size: 2rem;
+	}
+
+	.docs {
+		padding: 8%;
+	}
+
+	.docs h1 {
+		margin-left: -5%;
+		font-size: 1.5rem;
+	}
+	.docs i {
+		font-weight: normal;
+		margin-left: -5%;
+		font-size: 1.3rem;
+		margin: 15px 0 40px;
+	}
+	.docs li {
+		font-size: 1.1rem;
+		margin: 1.5rem 0;
+	}
+
+	footer {
+		border-top: 2px solid wheat;
+		font-size: 1rem;
+	}
+	li:nth-last-child(1) img:last-of-type {
+		width: 100%;
+	}
+
+	.docs img {
+		margin: 15px 0;
+	}
+}
